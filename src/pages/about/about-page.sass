@@ -1,0 +1,415 @@
+@mixin font($weight,$size)
+    font-weight: $weight
+    font-size: $size
+
+$grey-color: rgba(45, 45, 45, 0.5)
+$light-grey-color: rgba(255, 255, 255, 0.5)
+$dark-grey-color: rgba(45, 45, 45, 0.8)
+$dirty-grey-color: rgba(255, 255, 255, 0.7)
+
+/* Cover block */
+
+.cover-block-about
+    min-height: 536px
+    margin-top: 83px
+    display: flex
+    justify-content: space-between
+
+.cover-block-about__heading
+    max-width: 580px
+    display: flex
+    flex-direction: column
+
+.cover-block-about__icon1
+    margin-left: 15px
+
+.cover-block-about__heading
+    h1
+        margin-left: 16px
+        @include font(700,100px)
+        line-height: 101%
+
+.cover-block-about__icon2
+    margin-top: -244px
+    z-index: -50
+
+.cover-block-about__icon3
+    margin-left: 468px
+    margin-top: -225px
+
+.cover-block-about__image-and-button
+    display: flex
+    justify-content: space-between
+    margin-top: -132px
+
+.cover-block-about__h2
+    z-index: 50
+    margin-left: 106px
+    margin-top: -104px
+    @include font(700,40px)
+    line-height: 101%
+    color: #FFFFFF
+
+.cover-block-about__button-city
+    margin-top: 306px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    a
+        @include font(400,20px)
+        line-height: 100%
+    
+    a:hover
+        color: $grey-color
+    
+    a:active
+        color: #2D2D2D
+
+.cover-block-about__slider
+    position: relative
+    max-width: 425px
+    display: flex
+    flex-direction: column
+
+.slider-block-about__wrapper
+    z-index: -50
+    display: inline-block
+    vertical-align: middle
+    height: 528px
+    overflow: hidden
+
+.slider-block-about__slider-line
+    display: flex
+    flex-direction: column
+    position: relative
+    top: 0
+    transition: 1s
+
+.slider-block-about__h2
+    margin-top: -370px
+    margin-left: 39px
+    z-index: 50
+    @include font(700,64px)
+    line-height: 103%
+    color: #FFFFFF
+
+.slider-block-about__buttons
+    position: absolute    
+    z-index: 60
+    min-height: 187px
+    margin-top: 239px
+    margin-left: 394px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.slider-block-about__dot    
+    width: 12.72px
+    height: 12.72px
+    background: $light-grey-color
+    border-radius: 10px
+
+.slider-block-about__dot:hover
+    background: #FFFFFF
+
+.slider-block-about__dot:active
+    background: $light-grey-color
+
+.slider-block-about__dot_active
+    background: #FFFFFF
+
+.slider-block-about__button-prev
+    background: transparent
+
+.slider-block-about__button-prev:hover
+    transform: scale(1.1)
+
+.slider-block-about__button-prev:active
+    transform: none
+
+.slider-block-about__button-more
+    position: absolute
+    margin-top: 420px
+    margin-left: 209px
+    display: flex
+    align-items: center
+    width: 99px
+    height: 23px
+    border-bottom: 2px solid $dirty-grey-color
+
+.slider-block-about__button-more-a
+    @include font(400,16px)
+    line-height: 262%
+    color: $dirty-grey-color
+
+.slider-block-about__button-more-a:hover
+    color: #FFFFFF
+
+.slider-block-about__button-more-a:active
+    color: $dirty-grey-color
+
+/* Block with icons of partners */
+
+.partners-block
+    margin-top: 150px
+
+/* Block with years */
+
+.years-block
+    margin-top: 142px
+
+/* Block with citation */
+
+.citation-block
+    min-height: 800px
+    margin-top: 92px
+
+.citation-block__images
+    display: flex
+    justify-content: space-between
+
+.citation-block__image1
+    max-width: 757px
+    max-height: 505px
+
+.citation-block__image2
+    max-width: 305px
+    max-height: 505px
+
+.citation-block__text
+    margin-top: 68px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.citation-block__text-wrapper
+    max-width: 714px
+
+.citation-block__image3
+    max-width: 305px
+
+.citation-block__text-wrapper
+    h2
+        @include font(700,48px)
+        line-height: 99%
+        color: #424242
+
+    p
+        @include font(400,20px)
+        line-height: 100%
+        color: $dark-grey-color
+        margin-top: 14px
+
+.citation-block__image3
+    position: relative
+
+.citation-block__h1
+    position: absolute
+    z-index: 50
+    @include font(700,100px)
+    line-height: 42%
+    color: #FFFFFF
+    margin-top: 105px
+    margin-left: 56px
+
+/* Block with news */
+
+.news-block
+    margin-top: 86px
+
+/* Block with navigation (Design, History, Art) */
+
+.navigation-block
+    margin-top: 86px
+
+/* Block with form */
+
+.form-block
+    margin-top: 130px
+
+/* Footer */
+
+.footer
+    margin-top: 78px
+
+/* Styles for phones and tablets */
+
+@media screen and (max-width: 1129px)
+    /* Cover block */
+    .cover-block-about
+        margin-top: 45px
+    
+    /* Block with citation */
+    .citation-block
+        display: none
+    
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1129px)
+    /* Cover block */
+    .cover-block-about
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .cover-block-about__heading, .cover-block-about__slider
+        min-height: 600px
+    
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 10px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 80px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 45px
+    
+    .news-block__wrapper
+        margin-top: 45px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 75px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 75px
+
+/* Styles for large phones */   
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+    /* Cover block */
+    .cover-block-about
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .cover-block-about__heading, .cover-block-about__slider
+        min-height: 560px
+    
+    .cover-block-about__heading
+        h1
+            font-size: 90px
+    
+    .cover-block-about__button-city
+        display: none
+    
+    .cover-block-about__icon3
+        margin-left: 420px
+    
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 10px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 60px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 45px
+    
+    .news-block__wrapper
+        margin-top: 45px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 35px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 55px
+
+/* Styles for medium phones */
+
+@media screen and (min-width: 321px) and (max-width: 479px)
+    /* Cover block */
+    .cover-block-about__image-and-button, .cover-block-about__slider, .cover-block-about__icon2
+        display: none
+
+    .cover-block-about
+        max-width: 316px
+        min-height: 200px
+        margin-top: 10px
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .cover-block-about__heading
+        h1
+            font-size: 43px
+        
+    .cover-block-about__icon3
+        display: none
+    
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 10px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 60px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 25px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 35px
+
+/* Styles for small phones */
+
+@media screen and (max-width: 320px)
+    /* Cover block */
+    .cover-block-about__image-and-button, .cover-block-about__slider, .cover-block-about__icon2
+        display: none
+
+    .cover-block-about
+        max-width: 316px
+        min-height: 200px
+        margin-top: 10px
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .cover-block-about__heading
+        h1
+            font-size: 43px
+        
+    .cover-block-about__icon3
+        display: none
+    
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 10px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 60px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 25px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 35px    

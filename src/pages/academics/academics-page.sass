@@ -1,0 +1,536 @@
+@mixin font($weight,$size)
+    font-weight: $weight
+    font-size: $size
+
+$grey-color: rgba(45, 45, 45, 0.5)
+$light-grey-color: rgba(255, 255, 255, 0.5)
+$dark-grey-color: rgba(45, 45, 45, 0.8)
+
+/* Header */
+
+.menu__link
+    color: $light-grey-color
+
+.menu__link:hover
+    color: rgba(255, 255, 255, 0.8)
+
+.menu__link:active
+    color: $light-grey-color
+
+.active-page-in-header-academics
+    color: rgba(255, 255, 255, 0.8)
+
+/* Cover block */
+
+.cover-block-academics
+    min-height: 578px
+    margin-top: 101px
+    display: flex
+
+.cover-block-academics__text
+    max-width: 508px
+    padding: 0px 0px 147px 0px
+    display: flex
+    flex-direction: column
+        
+.cover-block-academics__text        
+    h1
+        margin-top: -63px
+        @include font(700,100px)
+        line-height: 102%
+    p
+        margin-top: 130px
+        max-width: 283px
+        @include font(400,20px)
+        line-height: 100%
+
+.cover-block-academics__icon-green
+    height: 31px
+    width: 46px
+    margin-top: -117px
+    margin-left: 473px
+
+.cover-block-academics__image
+    margin: -179px -100px 0px 179px
+    z-index: -50
+
+/* Block with navigation (Design, History, Art) */
+
+.navigation-block-academics
+    margin-top: 97px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.navigation-block-academics__faculty
+    min-width: 259px
+    display: flex
+    align-items: center
+
+.navigation-block-academics__faculty
+    a
+        @include font(700,27px)
+        margin-left: 33px
+    a:hover
+        color: $grey-color
+    a:active
+        color: #2D2D2D
+
+/* Block with articles */
+
+.articles-block-academics
+    margin-top: 98px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.articles-block-academics__left
+    max-width: 656px
+
+.articles-block-academics__right
+    max-width: 405px
+
+.articles-block-academics__tabs
+    display: flex
+    position: relative
+
+.articles-block-academics__tab-image
+    margin-left: 368px
+    position: absolute
+
+.articles-block-academics__tab
+    display: flex
+    align-items: center
+
+.articles-block-academics__button
+    margin-right: 10px
+    @include font(560,52px)
+    line-height: 110%
+    background: #FFFFFF
+    color: $grey-color
+
+.articles-block-academics__button:hover
+    color: #2D2D2D
+
+.articles-block-academics__button:active
+    color: $grey-color
+
+.tabs-content-articles
+    display: none
+
+.tabs-content-articles.tabs-nav-articles__item_active
+    display: block
+
+.tabs-nav-articles__item.tabs-nav-articles__item_active
+    color: #2D2D2D
+
+.articles-block-academics__article-image
+    position: relative
+    max-width: 656px
+    max-height: 429px
+    margin-top: 47px
+
+.articles-block-academics__article-center-image
+    position: absolute
+
+.articles-block-academics__article-image-name
+    max-width: 507px
+    position: absolute
+    margin: 162px 4px 162px 62px
+    z-index: 50
+    display: flex
+    flex-direction: column
+    text-align: center
+    color: #FFFFFF
+
+.articles-block-academics__article-image-name
+    p
+        margin-bottom: 11px
+
+.articles-block-academics__article-image-p1
+    @include font(300,20px)
+    line-height: 100%
+
+.articles-block-academics__article-image-p2, .articles-block-academics__article-image-p4
+    @include font(500,24px)
+    line-height: 100%
+
+.articles-block-academics__article-image-p3
+    @include font(300,15px)
+    line-height: 100%
+
+.articles-block-academics__article-image-icon1
+    position: absolute
+    margin-top: 370px
+    margin-left: 590px
+    z-index: 50
+
+.articles-block-academics__article-icon2
+    position: absolute
+    margin-top: 390px
+    margin-left: 418px
+    z-index: -50
+
+.articles-block-academics__article-intro
+    margin-top: 515px
+    max-width: 559px
+
+    h2
+        @include font(700,48px)
+        line-height: 100%
+        color: rgba(45, 45, 45, 0.9)
+    
+    p
+        @include font(400,20px)
+        font-weight: 400
+        line-height: 100%
+        color: $dark-grey-color
+        margin-top: 18px
+
+.articles-block-academics__article-button-more
+    margin-top: 18px
+    display: flex
+    align-items: center
+    width: 99px
+    height: 21px
+    border-bottom: 2px solid $grey-color
+
+.articles-block-academics__article-button-more-a
+    @include font(400,16px)
+    line-height: 262%
+    color: rgba(45, 45, 45, 0.7)
+
+.articles-block-academics__article-button-more-a:hover
+    color: black
+
+.articles-block-academics__article-button-more-a:active
+    color: rgba(45, 45, 45, 0.7)
+
+.articles-block-academics__links-wrapper
+    margin-top: 39px
+    margin-left: 20px
+    max-width: 372px
+
+/* Block with disciplines */
+
+.disciplines-block
+    margin-top: 81px
+
+.disciplines-block-wrapper
+    background-image: url("../../../src/assets/images/image-disciplines1.jpg")
+
+/* Block with form */
+
+.form-block
+    margin-top: 83px
+
+/* Footer */
+
+.footer
+    margin-top: 355px
+
+/* Styles for phones and tablets */
+
+@media screen and (max-width: 1129px)
+    /* Header */
+    .menu__link
+        color: rgba(0, 0, 0, 0.5)
+
+    .menu__link:hover
+        color: $dark-grey-color
+
+    .menu__link:active
+        color: rgba(0, 0, 0, 0.5)
+
+    .active-page-in-header-academics
+        color: black
+    
+    /* Cover block */
+    .cover-block-academics__image
+        display: none   
+ 
+    /* Block with articles */
+    .articles-block-academics__right
+        img
+            display: none
+    
+    /* Footer */
+    .footer
+        margin-top: 125px
+    
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1129px)
+    /* Cover block */
+    .cover-block-academics
+        margin-top: 58px
+        min-height: 265px
+
+    .cover-block-academics__text
+        max-width: 763px
+    
+    .cover-block-academics__text
+        p
+            margin-top: 100px
+            max-width: 410px
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block-academics
+        margin-top: -100px
+
+    .navigation-block-academics__faculty 
+        a
+            font-size: 23px
+    
+    .navigation-block-academics__faculty
+        min-width: 225px
+    
+    /* Block with articles */
+    .articles-block-academics
+        margin-top: 80px
+        flex-direction: column
+        align-items: center
+    
+    .articles-block-academics__left
+        min-width: 690px
+    
+    .articles-block-academics__article-intro
+        margin-top: 500px
+    
+    .articles-block-academics__right
+        img
+            display: none
+
+    .articles-block-academics__links-wrapper, .articles-block-academics__right
+        max-width: 700px
+    
+    .articles-block-academics__links, .years-block-text__links
+        min-height: 145px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 60px
+
+/* Styles for large phones */   
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+    /* Cover block */
+    .cover-block-academics
+        margin-top: 20px
+        min-height: 265px
+
+    .cover-block-academics__text
+        max-width: 475px
+    
+    .cover-block-academics__text
+        h1
+            font-size: 61px
+        p
+            margin-top: 15px
+            max-width: 475px
+    
+    .cover-block-academics__icon-green
+        display: none
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block-academics
+        margin-top: -125px
+        flex-direction: column
+        align-items: center
+
+    .navigation-block-academics__faculty
+        margin-top: 30px
+
+        a
+            font-size: 27px
+    
+    /* Block with articles */
+    .articles-block-academics
+        margin-top: 63px
+
+    .articles-block-academics__tab-image
+        width: 225px
+        height: 150px
+        margin-left: 232px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .articles-block-academics__button
+        font-size: 30px
+        padding-top: 10px
+
+    .articles-block-academics__article-image
+        width: 455px
+        height: 315px
+
+    .articles-block-academics__article-center-image
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .articles-block-academics__article-image-name
+        margin: 100px 4px 162px 0px
+    
+    .articles-block-academics__article-image-icon1, .articles-block-academics__article-icon2
+        display: none
+    
+    .articles-block-academics__article-intro
+        margin-top: 27px
+    
+        h2
+            font-size: 37px
+
+    .articles-block-academics__right, .articles-block-academics__links-wrapper
+        max-width: 475px
+    
+    .articles-block-academics__links, .years-block-text__links
+        min-height: 165px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 30px
+
+/* Styles for medium phones */
+
+@media screen and (min-width: 321px) and (max-width: 479px)
+    /* Cover block */
+    .cover-block-academics
+        margin-top: 20px
+        min-height: 265px
+
+    .cover-block-academics__text
+        max-width: 316px
+    
+    .cover-block-academics__text
+        h1
+            font-size: 35px
+        p
+            margin-top: 15px
+            max-width: 475px
+    
+    .cover-block-academics__icon-green
+        display: none
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block-academics
+        margin-top: -140px
+        flex-direction: column
+        align-items: center
+
+    .navigation-block-academics__faculty
+        margin-top: 30px
+
+        a
+            font-size: 27px
+    
+    /* Block with articles */
+    .articles-block-academics
+        margin-top: 3px
+    
+    .articles-block-academics__tabs
+        display: none
+
+    .articles-block-academics__article-image
+        width: 316px
+        height: 216px
+
+    .articles-block-academics__article-center-image
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .articles-block-academics__article-image-name
+        margin: 47px 4px 0px 0px
+    
+    .articles-block-academics__article-image-icon1, .articles-block-academics__article-icon2
+        display: none
+    
+    .articles-block-academics__article-intro
+        margin-top: 27px
+    
+        h2
+            font-size: 25px
+
+    .articles-block-academics__right, .articles-block-academics__links-wrapper
+        max-width: 316px
+    
+    .articles-block-academics__links, .years-block-text__links
+        min-height: 200px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 20px
+
+/* Styles for small phones */
+
+@media screen and (max-width: 320px)
+    /* Cover block */
+    .cover-block-academics
+        margin-top: 20px
+        min-height: 265px
+
+    .cover-block-academics__text
+        max-width: 316px
+    
+    .cover-block-academics__text
+        h1
+            font-size: 35px
+        p
+            margin-top: 15px
+            max-width: 475px
+    
+    .cover-block-academics__icon-green
+        display: none
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block-academics
+        margin-top: -140px
+        flex-direction: column
+        align-items: center
+
+    .navigation-block-academics__faculty
+        margin-top: 30px
+
+        a
+            font-size: 27px
+    
+    /* Block with articles */
+    .articles-block-academics
+        margin-top: 3px
+    
+    .articles-block-academics__tabs
+        display: none
+
+    .articles-block-academics__article-image
+        width: 291px
+        height: 216px
+
+    .articles-block-academics__article-center-image
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    .articles-block-academics__article-image-name
+        margin: 47px 4px 0px 0px
+    
+    .articles-block-academics__article-image-icon1, .articles-block-academics__article-icon2
+        display: none
+    
+    .articles-block-academics__article-intro
+        margin-top: 27px
+    
+        h2
+            font-size: 25px
+
+    .articles-block-academics__right, .articles-block-academics__links-wrapper
+        max-width: 316px
+    
+    .articles-block-academics__links, .years-block-text__links
+        min-height: 200px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 20px

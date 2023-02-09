@@ -1,0 +1,1389 @@
+@mixin font($weight,$size)
+    font-weight: $weight
+    font-size: $size
+
+$grey-color: rgba(45, 45, 45, 0.5)
+$light-grey-color: rgba(255, 255, 255, 0.5)
+$dark-grey-color: rgba(45, 45, 45, 0.8)
+$dirty-grey-color: rgba(255, 255, 255, 0.7)
+    
+a:hover
+    color: black
+
+button
+    cursor: pointer
+    
+/* Header */
+
+.header
+    width: 100%
+    left: 0
+    top: 0
+
+.header__container
+    display: flex
+    min-height: 53px
+    margin-top: 25px
+    align-items: center
+
+.header__menu
+    margin: 0px 0px 0px 567px
+
+.menu
+    padding: 5px 0
+
+.menu__list
+    display: flex
+    flex-wrap: wrap
+
+.menu__item:not(:last-child)
+    margin: 0px 47px 0px 0px
+
+.menu__link
+    color: rgba(0, 0, 0, 0.5)
+    font-weight: 700
+    font-size: 17px
+    line-height: 159%
+
+.menu__link:hover
+    color: $dark-grey-color
+
+.menu__link:active
+    color: rgba(0, 0, 0, 0.5)
+
+/* Main */
+
+.page
+    flex: 1 1 auto
+    width: 100%
+
+/* Block with icons of partners */
+
+.partners-block
+    min-height: 46.83px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.partners-block__img
+    width: 119px
+    height: 47px
+
+/* Block with navigation (Design, History, Art) */
+
+.navigation-block
+    min-height: 344px
+    margin-top: 85px
+    display: flex
+    justify-content: space-between
+
+.navigation-block__faculty
+    max-width: 249.9px
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.navigation-block__faculty:nth-child(1)
+    margin-left: 41px
+
+.navigation-block__faculty:nth-child(3)
+    margin-right: 41px
+
+.navigation-block__text
+    margin-top: 70.5px
+    text-align: center
+
+.navigation-block__text 
+    a
+        font-weight: 600
+        font-size: 27px
+    p
+        margin-top: 23px
+        font-weight: 400
+        font-size: 17px
+        line-height: 159%
+
+.navigation-block__text 
+    a:hover
+        color: $grey-color
+    a:active
+        color: #2D2D2D
+
+/* Block with news */
+
+.news-block__h2
+    text-align: center
+    font-weight: 600
+    font-size: 32px
+
+.news-block__wrapper
+    margin-top: 60px
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr))
+    grid-template-rows: auto
+    grid-gap: 30px 44px
+
+.news-block__article
+    min-height: 365px
+    max-width: 330px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+/* Styles for cutting big headings */
+.news-block__content
+    width: 330px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.news-block__content:nth-child(2)
+    @include font(600,20px)
+
+.news-block__content:nth-child(3)
+    @include font(400,17px)
+
+.news-block__content
+    a:hover
+        color: $grey-color
+    
+    a:active
+        color: #2D2D2D
+
+.news-block__pagination
+    margin-top: 16px
+    display: flex
+    justify-content: flex-end
+
+    li:not(:last-child)
+        margin: 0px 30px 0px 0px
+    
+    li
+        font-weight: 600
+        font-size: 20px
+        line-height: 150%px
+
+li
+    color: rgba(0, 0, 0, 0.5)
+
+li:hover
+    cursor: pointer
+    color: rgba(0, 0, 0, 0.8)
+
+li:active
+    color: rgba(0, 0, 0, 0.5)
+
+.news-block__li_active
+    color: rgba(0, 0, 0, 0.8)
+
+/* Block with form */
+
+.form-block
+    min-height: 499px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.form-block__information
+    max-width: 322px
+    padding: 18px 0px 0px 0px
+
+.form-block__information
+    h2
+        @include font(600,32px)
+    p
+        margin-top: 57px
+        line-height: 159%
+        @include font(400,17px)
+    img
+        margin-top: -50px
+
+.form
+    min-width: 530px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.form
+    input
+        background: #DFDFDF
+        width: 100%
+        font-family: Epilogue
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 27px
+        color: black
+
+    input::placeholder
+        font-family: Epilogue
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 27px
+        color: $grey-color
+
+.form__input-name, .form__input-email
+    min-height: 70px
+    padding: 0px 33px
+
+.form__input-message
+    min-height: 196px
+    padding: 0px 33px
+
+.form__button
+    width: 235px
+    height: 70px
+    background: #000000
+    @include font(600,20px)
+    color: #FFFFFF
+    text-align: center
+
+.form__button:hover
+    background: #504d4d
+
+.form__button:active
+    background: #000000
+
+.form__input-box_error .form__input
+    border: 2px solid #f31010
+
+.error-label
+    display: block
+    font-family: Epilogue
+    font-style: normal
+    font-size: 15px
+    color: #f31010
+    margin-top: 10px
+
+/* Footer */
+
+.footer
+    width: 100%
+    background: #2D2D2D
+
+.footer__container
+    display: flex
+    min-height: 248px
+    justify-content: space-between
+    flex-wrap: wrap
+
+.footer__left
+    min-width: 141px
+    padding: 31px 0px 16px 0px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.footer-menu-cities__list
+    display: flex
+    flex-direction: column
+
+.footer-menu-cities__link
+    @include font(400,20px)
+    line-height: 135%
+    color: $light-grey-color
+
+.footer-menu-cities__link:hover, .footer-menu__link:hover, .footer__email:hover
+    color: #FFFFFF
+
+.footer-menu-cities__link:active, .footer-menu__link:active, .footer__email:active
+    color: $light-grey-color
+
+.footer__right
+    max-width: 702px
+    padding: 35px 0px 20px 0px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.footer-menu__list
+    display: flex
+    flex-wrap: wrap
+
+.footer-menu__item:not(:last-child)
+    margin: 0px 50px 0px 0px
+
+.footer-menu__link
+    color: rgba(0, 0, 0, 0.5)
+    @include font(700,17px)
+    line-height: 159%
+    color: $light-grey-color
+
+.footer__email-and-logo
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.footer__email-wrapper
+    display: flex
+    flex-direction: column
+
+.footer__email
+    margin-top: 25px
+    @include font(400,17px)
+    color: $light-grey-color
+
+.footer__social-networks
+    display: flex
+
+.footer__social-networks
+    a:not(:last-child)
+        margin: 0px 32px 0px 0px
+
+/* Block with disciplines */
+
+.disciplines-block-wrapper
+    position: relative
+    min-height: 627px
+
+.disciplines-block__heading
+    position: absolute
+    z-index: 50
+    margin-top: 24px
+    margin-left: 442px
+    text-align: center
+    font-family: 'Inter'
+    @include font(700,17px)
+    line-height: 123%
+    color: #FFFFFF
+
+.disciplines-block__disciplines
+    position: absolute
+    min-height: 265px
+    z-index: 50
+    margin-top: 157px
+    margin-left: 138px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    font-family: 'Inter'
+    
+    p:first-child, p:last-child
+        @include font(700,32px)
+        line-height: 122%
+        color: $light-grey-color
+    
+    p:nth-child(even)
+        margin-left: 17px
+        @include font(700,40px)
+        line-height: 120%
+        color: $dirty-grey-color
+    
+    p:nth-child(3)
+        margin-left: 38px
+        @include font(700,48px)
+        line-height: 121%
+        color: #FFFFFF
+
+.disciplines-block__description
+    position: absolute
+    z-index: 50
+    max-width: 354px
+    margin-top: 395px
+    margin-left: 699px
+
+.disciplines-block__heading-of-description, .disciplines-block__text-of-description
+    font-family: 'Inter'
+    color: #FFFFFF
+    line-height: 121%
+
+.disciplines-block__heading-of-description
+    @include font(700,24px)
+
+.disciplines-block__text-of-description
+    @include font(400,20px)
+
+.disciplines-block__button-more
+    margin-top: 8px
+    margin-left: 255px
+    display: flex
+    align-items: center
+    width: 99px
+    height: 21px
+    border-bottom: 2px solid $dirty-grey-color
+
+.disciplines-block__button-more-a
+    @include font(400,16px)
+    line-height: 262%
+    color: $dirty-grey-color
+
+.disciplines-block__button-more-a:hover
+    color: #FFFFFF
+
+.disciplines-block__button-more-a:active
+    color: $dirty-grey-color
+
+/* Block with teachers */
+
+.teachers-block__tab-content
+    display: none
+
+.teachers-block__tab-content.teachers-block__tab_active
+    margin-top: 38px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.teachers-block__tab-wrapper.teachers-block__tab_active    
+    border-bottom: 2px solid #FFFFFF  
+
+    button
+        color: #FFFFFF  
+
+.teachers-block
+    margin-top: -93px
+    display: flex
+    flex-direction: column
+
+.teachers-block__tabs
+    align-self: center
+    display: flex
+    max-width: 298px
+    z-index: 50
+
+.teachers-block__tab-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 77px
+
+.teachers-block__tab-art-wrapper
+    min-width: 76px
+
+.teachers-block__tab-design-wrapper
+    min-width: 109px
+
+.teachers-block__tab-history-wrapper
+    min-width: 111px
+
+.teachers-block__tab
+    max-height: 21px
+    font-family: 'Inter'
+    @include font(700,17px)
+    line-height: 124%
+    color: $light-grey-color
+    background-color: rgba(28,28,28,0)
+
+.teachers-block__tab:hover
+    color: #FFFFFF
+
+.teachers-block__tab:active
+    color: $light-grey-color
+
+.teachers-block__tab-art
+    max-width: 24px
+
+.teachers-block__tab-design
+    max-width: 57px
+
+.teachers-block__tab-history
+    max-width: 59px    
+
+.teachers-block__photo
+    min-height: 241px
+    max-width: 176px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.teachers-block__info
+    text-align: center
+
+.teachers-block__info
+    h5
+        @include font(600,20px)
+        line-height: 150%
+    
+    p
+        @include font(400,17px)
+        line-height: 159%
+
+/* Block with years */
+
+.years-block
+    min-height: 910px
+    display: flex
+    flex-direction: column
+
+.years-block__images
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.years-block-images__left
+    max-width: 632px
+
+.years-block-images__right
+    max-width: 430px
+
+.years-block-images__image1
+    position: relative
+
+.years-block-images__image1-heading
+    position: absolute
+    margin-top: 160px
+    margin-left: 186px
+    max-width: 240px
+    text-align: center
+    color: #FFFFFF
+
+    p
+        margin-bottom: 14px
+
+.years-block-images__heading1
+    @include font(300,20px)
+    line-height: 100%
+
+.years-block-images__heading2, .years-block-images__heading3
+    @include font(500,24px)
+    line-height: 100%
+
+.years-block-images__heading4
+    @include font(300,15px)
+    line-height: 100%
+
+.years-block-images__blue-icon
+    position: absolute
+    margin-top: 330px
+    margin-left: 567px
+
+.years-block-images__image2-and-years
+    margin-top: 19px
+    display: flex
+
+.years-block-images__years
+    max-width: 110px
+    max-height: 172px
+    margin-top: 30px
+    margin-left: 50px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.years-block-images__years
+    button
+        background: transparent
+        @include font(700,20px)
+        line-height: 100%
+        color: $grey-color
+    
+    button:hover
+        color: rgba(45, 45, 45, 0.9)
+
+.years-block-images__image2
+    margin-left: 61px
+
+.years-block__text
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: 39px
+
+.years-block-text__left
+    max-width: 733px    
+
+.years-block-text__right
+    max-width: 315px
+
+.years-block-text__left
+    h2
+        @include font(700,48px)
+        line-height: 99%
+        color: rgba(45, 45, 45, 0.9)
+        min-height: 143px
+
+    p
+        @include font(400,20px)
+        line-height: 100%
+        color: $dark-grey-color
+        max-width: 691px
+        min-height: 63px
+        margin-top: 18px
+
+.years-block-text__button-more
+    margin-top: 18px
+    display: flex
+    align-items: center
+    width: 99px
+    height: 21px
+    border-bottom: 2px solid $grey-color
+
+.years-block-text__button-more-a
+    @include font(400,16px)
+    line-height: 262%
+    color: rgba(45, 45, 45, 0.7)
+
+.years-block-text__button-more-a:hover
+    color: black
+
+.years-block-text__button-more-a:active
+    color: rgba(45, 45, 45, 0.7)
+
+.years-block-text__links, .articles-block-academics__links
+    list-style: disc
+    min-height: 196px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+    li
+        list-style: disc
+    
+    a
+        @include font(700,20px)
+        line-height: 100%
+        color: $grey-color
+    
+    a:hover
+        color: rgba(45, 45, 45, 0.9)
+    a:active
+        color: $grey-color
+
+.tabs-content
+    display: none
+
+.tabs-content.tabs-nav__item_active
+    display: block
+
+.tabs-nav__item.tabs-nav__item_active
+    @include font(700,48px)
+    line-height: 100%
+    color: rgba(45, 45, 45, 0.9)
+
+/* Block with gallery */
+
+.gallery-block
+    min-height: 856px
+
+.gallery-block__top-images
+    display: flex
+    flex-wrap: wrap
+
+.gallery-block__bottom-images
+    display: flex
+    flex-wrap: wrap
+    margin-top: 19px
+
+.gallery-block__middle-size-image
+    max-width: 397px
+    max-height: 493px
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.gallery-block__big-size-image
+    max-width: 664px
+    max-height: 493px
+    margin-left: 19px
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.gallery-block__small-size-image
+    max-width: 258px
+    max-height: 205px
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.gallery-block__small-size-image:not(:first-child)
+    margin-left: 16px
+
+.gallery-block__tabs
+    display: flex
+    justify-content: space-between
+    margin-top: 102px
+
+.gallery-block__tab
+    @include font(570,36px)
+    line-height: 100%
+    color: $grey-color
+    background-color: rgba(0,0,0,0)
+
+.gallery-block__tab:hover
+    color: #2D2D2D
+
+.gallery-block__tab:active
+    color: $grey-color
+
+.gallery-block-wrapper
+    display: none
+
+.gallery-block-wrapper.gallery-block__tab_active
+    display: block
+
+.gallery-block__tab.gallery-block__tab_active
+    color: #2D2D2D
+
+/* Active page */
+
+.active-page-in-header
+    color: black
+
+/* Styles for phones and tablets */
+@media screen and (max-width: 1129px)
+    /* Block with disciplines */
+    .disciplines-block
+        display: none
+    
+    /* Block with teachers */
+    .teachers-block__tab
+        color: $grey-color
+        font-size: 20px
+
+    .teachers-block__tab-wrapper.teachers-block__tab_active    
+        border-bottom: 2px solid #2D2D2D 
+
+        button
+            color: #2D2D2D 
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1129px)
+    /* Header */
+    .header__menu
+        margin: 0px 0px 0px 160px
+    .menu__link
+        font-size: 18px
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block__text
+        max-width: 220px
+
+    /* Block with form */
+    .form
+        min-width: 350px
+    
+    /* Footer */
+
+    .footer__left
+        flex-direction: row
+    
+    .footer-menu-cities
+        margin-left: 88px
+    
+    .footer-menu-cities__list
+        min-width: 470px
+        flex-direction: row
+        justify-content: space-between
+    
+    .footer__right
+        min-height: 250px
+    
+    .footer__social-networks
+        padding: 0px 170px
+    
+    /* Block with years */
+    .years-block
+        align-items: center
+    
+    .years-block-images__right
+        display: none
+    
+    .years-block-text__right
+        max-width: 753px
+    
+    .years-block-text__links
+        min-height: 120px
+    
+    .years-block-text__right
+        margin-top: 43px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 0px
+    
+    .teachers-block__tab-content.teachers-block__tab_active        
+        justify-content: space-around
+
+    .teachers-block__photos
+        max-width: 698px
+    
+    .teachers-block__photo
+        padding-top: 15px
+    
+    /* Block with gallery */
+    .gallery-block
+        min-height: 600px
+
+    .gallery-block__bottom-images
+        flex-wrap: nowrap
+
+    .gallery-block__middle-size-image
+        width: 268px
+        height: 322px
+
+    .gallery-block__big-size-image
+        width: 447px
+        height: 322px
+    
+    .gallery-block__tabs
+        margin-top: 40px
+    
+    .gallery-block__tab
+        font-size: 31px
+
+/* Styles for large phones */ 
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+    /* Header */
+    .header__menu
+        margin: 0px 0px 0px 130px
+    .menu__link
+        font-size: 18px
+
+    /* Block with icons of partners */
+    .partners-block
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap        
+
+    .partners-block__img
+        margin: 20px 20px 0px 0px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        display: flex
+        flex-direction: column
+        justify-content: start
+    
+    .navigation-block__faculty:nth-child(1)
+        margin-left: 0px
+    
+    .navigation-block__faculty:nth-child(3)
+        margin-right: 0px
+    
+    .navigation-block__faculty
+        max-width: 475px
+        margin-top: 25px
+    
+    .navigation-block__text
+        margin-top: 19.5px
+
+    /* Block with news */
+    .news-block__wrapper
+        margin-top: 50px
+        display: flex
+        flex-direction: column
+        align-items: center
+    
+    /* Block with form */
+    .form-block
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .form-block__information 
+        max-width: 470px
+
+    .form-block__information
+        p
+            margin-top: 22px
+
+        img
+            display: none
+
+    .form
+        min-width: 462px
+        min-height: 465px
+        margin-top: 22px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    
+    /* Footer */
+    .footer-menu-cities__list
+        min-width: 452px
+        flex-direction: row
+        justify-content: space-between
+    
+    .footer-menu-cities
+        margin-top: 35px
+    
+    .footer__right
+        padding-top: 20px
+    
+    .footer-menu-cities__list
+        min-width: 452px
+    
+    .footer-menu__item:not(:last-child)
+        margin: 0px 74px 0px 0px
+    
+    .footer-menu__item
+        line-height: 250%
+    
+    .footer__email-and-logo
+        justify-content: center
+    
+    .footer__big-logo
+        margin-top: 20px
+    
+    .footer__social-networks
+        margin-top: 20px
+        padding: 0px 65px
+    
+    /* Block with years */
+    .years-block
+        align-items: center
+      
+    .years-block-images__right
+        display: none
+    
+    .years-block-images__image1
+        width: 430px
+        height: 260px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .years-block-text__right
+        max-width: 475px
+    
+    .years-block-images__image2
+        width: 210px
+        height: 178px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .years-block-images__image1-heading
+        margin-top: 80px
+        margin-left: 100px
+    
+    .years-block-images__blue-icon
+        margin-top: 194px
+        margin-left: 367px
+    
+    .years-block-images__years
+        margin-top: 0px
+
+    .years-block-text__links
+        min-height: 150px
+    
+    .years-block-text__right
+        margin-top: 43px
+    
+    .years-block-text__left
+        h2
+            font-size: 36px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 0px
+    
+    .teachers-block__tab-content.teachers-block__tab_active        
+        justify-content: space-around
+        margin-top: 27px
+
+    .teachers-block__photos
+        max-width: 465px
+    
+    .teachers-block__photo
+        padding-top: 15px
+    
+    /* Block with gallery */
+    .gallery-block
+        min-height: 360px
+
+    .gallery-block__bottom-images
+        flex-wrap: nowrap
+
+    .gallery-block__middle-size-image
+        width: 169px
+        height: 171px
+
+    .gallery-block__big-size-image
+        width: 257px
+        height: 171px
+    
+    .gallery-block__tabs
+        margin-top: 30px
+    
+    .gallery-block__tab
+        font-size: 20px
+
+/* Styles for medium phones */
+
+@media screen and (min-width: 321px) and (max-width: 479px)
+    /* Header */
+    .header__menu
+        margin: 0px 0px 0px 30px
+
+    /* Block with icons of partners */
+    .partners-block
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+
+    .partners-block__img
+        margin: 20px 20px 0px 0px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        display: flex
+        flex-direction: column
+        justify-content: start
+    
+    .navigation-block__faculty:nth-child(1)
+        margin-left: 0px
+    
+    .navigation-block__faculty:nth-child(3)
+        margin-right: 0px
+    
+    .navigation-block__faculty
+        max-width: 475px
+        margin-top: 25px
+    
+    .navigation-block__text
+        margin-top: 19.5px
+
+    /* Block with news */
+    .news-block__wrapper
+        margin-top: 45px
+
+    /* Block with form */
+    .form-block
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .form-block__information 
+        max-width: 310px
+
+    .form-block__information
+        h2
+            font-size: 30px
+
+        p
+            margin-top: 17px
+
+        img
+            display: none
+
+    .form
+        min-width: 310px
+        min-height: 465px
+        margin-top: 17px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    
+    /* Footer */
+    .footer-menu-cities
+        margin-top: 25px
+
+    .footer__right
+        padding-top: 20px
+    
+    .footer-menu__item:not(:last-child)
+        margin: 0px 32px 0px 0px
+    
+    .footer-menu__item
+        line-height: 250%
+    
+    .footer-menu__link
+        font-size: 20px
+    
+    .footer__big-logo
+        display: none
+    
+    .footer__social-networks
+        max-width: 315px
+        margin-top: 30px
+    
+    .footer__social-networks
+        a:not(:last-child)
+            margin: 0px 26px 0px 0px
+    
+    /* Block with years */
+    .years-block
+        align-items: center
+        min-height: 860px
+      
+    .years-block-images__right
+        display: none
+    
+    .years-block-images__image1
+        width: 314px
+        height: 194px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .years-block-text__right
+        max-width: 316px
+    
+    .years-block-images__image2
+        display: none
+    
+    .years-block-images__image1-heading
+        margin-top: 36px
+        margin-left: 36px
+    
+    .years-block-images__blue-icon
+        margin-top: 131px
+        margin-left: 251px
+    
+    .years-block-images__years
+        margin-left: 100px
+        min-height: 150px
+    
+    .years-block-images__image2-and-years
+        margin-top: 0px
+    
+    .years-block-images__years
+        button
+            font-size: 24px
+
+    .years-block-text__links
+        min-height: 200px
+    
+    .years-block-text__right
+        margin-top: 45px
+    
+    .years-block-text__left
+        h2
+            font-size: 22px
+            min-height: 75px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 0px
+    
+    .teachers-block__tab-content.teachers-block__tab_active        
+        justify-content: space-around
+        margin-top: 27px
+
+    .teachers-block__photos
+        max-width: 316px
+    
+    .teachers-block__photo
+        padding-top: 15px
+    
+    /* Block with gallery */
+    .gallery-block
+        min-height: 710px
+
+    .gallery-block__bottom-images
+        display: none
+
+    .gallery-block__middle-size-image
+        width: 275px
+        height: 311px
+
+    .gallery-block__big-size-image
+        margin-top: 15px
+        width: 270px
+        height: 211px
+    
+    .gallery-block__tabs
+        margin-top: 23px
+        flex-direction: column
+    
+    .gallery-block__tab
+        font-size: 28px
+        margin-top: 15px
+
+/* Styles for small phones */
+
+@media screen and (max-width: 320px)
+    /* Header */
+    .header__menu
+        margin: 0px 0px 0px 10px
+
+    /* Block with icons of partners */
+    .partners-block
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+
+    .partners-block__img
+        margin: 20px 20px 0px 0px
+    
+    .partners-block__img
+        width: 75px
+        height: 50px
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        display: flex
+        flex-direction: column
+        justify-content: start
+    
+    .navigation-block__faculty:nth-child(1)
+        margin-left: 0px
+    
+    .navigation-block__faculty:nth-child(3)
+        margin-right: 0px
+    
+    .navigation-block__faculty
+        max-width: 475px
+        margin-top: 25px
+    
+    .navigation-block__text
+        margin-top: 19.5px
+    
+    /* Block with news */
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with form */
+    .form-block
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .form-block__information 
+        max-width: 310px
+
+    .form-block__information
+        h2
+            font-size: 28px
+            
+        p
+            margin-top: 17px
+
+        img
+            display: none
+
+    .form
+        min-width: 295px
+        min-height: 465px
+        margin-top: 17px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    
+    /* Footer */
+    .footer-menu-cities
+        margin-top: 25px
+
+    .footer__right
+        padding-top: 20px
+    
+    .footer-menu__item:not(:last-child)
+        margin: 0px 32px 0px 0px
+    
+    .footer-menu__item
+        line-height: 250%
+    
+    .footer-menu__link
+        font-size: 20px
+    
+    .footer__big-logo
+        display: none
+    
+    .footer__social-networks
+        max-width: 315px
+        margin-top: 30px
+    
+    .footer__social-networks
+        a:not(:last-child)
+            margin: 0px 26px 0px 0px
+    
+    /* Block with years */
+    .years-block
+        align-items: center
+        min-height: 860px
+      
+    .years-block-images__right
+        display: none
+    
+    .years-block-images__image1
+        width: 314px
+        height: 194px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .years-block-text__right
+        max-width: 316px
+    
+    .years-block-images__image2
+        display: none
+    
+    .years-block-images__image1-heading
+        margin-top: 36px
+        margin-left: 36px
+    
+    .years-block-images__blue-icon
+        margin-top: 131px
+        margin-left: 251px
+    
+    .years-block-images__years
+        margin-left: 100px
+        min-height: 150px
+    
+    .years-block-images__image2-and-years
+        margin-top: 0px
+    
+    .years-block-images__years
+        button
+            font-size: 24px
+
+    .years-block-text__links
+        min-height: 200px
+    
+    .years-block-text__right
+        margin-top: 45px
+    
+    .years-block-text__left
+        h2
+            font-size: 22px
+            min-height: 75px
+
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 0px
+    
+    .teachers-block__tab-content.teachers-block__tab_active        
+        justify-content: space-around
+        margin-top: 27px
+
+    .teachers-block__photos
+        max-width: 316px
+    
+    .teachers-block__photo
+        padding-top: 15px
+    
+    /* Block with gallery */
+    .gallery-block
+        min-height: 710px
+
+    .gallery-block__bottom-images
+        display: none
+
+    .gallery-block__middle-size-image
+        width: 275px
+        height: 311px
+
+    .gallery-block__big-size-image
+        margin-top: 15px
+        width: 270px
+        height: 211px
+    
+    .gallery-block__tabs
+        margin-top: 23px
+        flex-direction: column
+    
+    .gallery-block__tab
+        font-size: 28px
+        margin-top: 15px

@@ -1,0 +1,265 @@
+@mixin font($weight,$size)
+    font-weight: $weight
+    font-size: $size
+
+$grey-color: rgba(45, 45, 45, 0.5)
+    
+/* Cover block */
+
+.cover-block
+    display: flex
+    flex-wrap: wrap
+    min-height: 594px
+    margin-top: 103px
+
+.text-block
+    max-width: 417.7px
+    padding: 28px 0px 117px 0px
+
+.slider-block
+    max-width: 449px
+    display: flex
+    flex-direction: column
+    position: relative
+
+.cover-block__slider
+    margin: 0px 0px 0px 214px
+
+.text-block__p1
+    @include font(600,20px)
+
+.text-block__h1
+    @include font(700,100px)
+    line-height: 102%
+    margin-top: 34.5px
+
+.text-block__p2
+    @include font(400,20px)
+    line-height: 135%
+    margin-top: 41.5px
+
+.text-block__link-a
+    @include font(400,17px)
+    color: $grey-color
+
+.text-block__link-a:active
+    color: $grey-color
+
+.text-block__link
+    display: flex
+    align-items: center
+    margin-top: 55px
+    width: 72px
+    height: 30px
+    border-bottom: 2px solid $grey-color
+
+.slider-block__buttons
+    margin-top: 13px
+    display: flex
+    justify-content: flex-end
+
+.slider-block__dot
+    width: 12.72px
+    height: 12.72px
+    background: $grey-color
+    border-radius: 10px
+    margin-right: 21px
+
+.slider-block__dot:hover
+    background: black
+
+.slider-block__dot:active
+    background: $grey-color
+
+.slider-block__dot_active
+    background: black
+
+.slider-block__button-prev
+    background: white
+
+.slider-block__button-prev:hover
+    transform: scale(1.1)
+
+.slider-block__button-prev:active
+    transform: none
+
+.slider-block__slider-line
+    display: flex
+    position: relative
+    left: 0
+    transition: 1s
+
+.slider-block__wrapper
+    display: inline-block
+    vertical-align: middle
+    width: 449px
+    overflow: hidden
+
+.slider-block__icons
+    position: absolute
+    max-width: 503px
+    min-height: 528px
+    margin-left: -39px
+    margin-top: -14px
+    display: flex
+    flex-direction: column
+    z-index: 50
+
+.slider-block__icon3
+    margin-top: 248px
+
+.slider-block__icons1-2
+    display: flex
+    padding-left: 84.38px
+
+.slider-block__icon2
+    margin-left: 233.38px
+
+.slider-block__icon1
+    margin-top: 38.23px
+
+/* Block with icons of partners */
+ 
+.partners-block
+    margin-top: 94.28px
+
+/* Block with navigation (Design, History, Art) */
+
+.navigation-block
+    margin-top: 130.45px
+
+/* Block with news */
+
+.news-block
+    margin-top: 80px
+
+/* Block with form */
+
+.form-block
+    margin-top: 97px
+
+/* Footer */
+
+.footer
+    margin-top: 95px
+
+/* Styles for phones and tablets */
+
+@media screen and (max-width: 1129px)
+    /* Cover block */
+    .cover-block
+        margin-top: 15px
+    
+    .text-block
+        padding-bottom: 5px
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1129px)
+    /* Cover block */
+    .text-block
+        min-width: 750px
+
+    .text-block__p2
+        margin-top: 21px
+    
+    .cover-block__slider
+        margin-left: 130px
+
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 80px
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 100px
+
+/* Styles for large phones */   
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+    /* Cover block */
+    .cover-block
+        min-height: 494px
+
+    .slider-block
+        display: none
+    
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 25px
+
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 35px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 50px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 45px
+
+/* Styles for medium phones */
+
+@media screen and (min-width: 321px) and (max-width: 479px)
+    /* Cover block */
+    .cover-block
+        min-height: 394px
+
+    .slider-block
+        display: none
+
+    .text-block__h1
+        font-size: 60px
+
+    .text-block__p2
+        font-size: 16px
+
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 20px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 35px
+
+    /* Block with news */
+    .news-block
+        margin-top: 45px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 40px
+
+/* Styles for small phones */
+
+@media screen and (max-width: 320px)
+    /* Cover block */
+    .cover-block
+        min-height: 394px
+
+    .slider-block
+        display: none
+    
+    .text-block__h1
+        font-size: 60px
+
+    .text-block__p2
+        font-size: 16px
+
+    /* Block with icons of partners */
+    .partners-block
+        margin-top: 15px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 35px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 35px

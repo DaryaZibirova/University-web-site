@@ -1,0 +1,432 @@
+@mixin font($weight,$size)
+    font-weight: $weight
+    font-size: $size
+
+$grey-color: rgba(45, 45, 45, 0.5)
+$light-grey-color: rgba(255, 255, 255, 0.5)
+$dark-grey-color: rgba(45, 45, 45, 0.8)
+
+/* Cover block */
+
+.cover-block-design 
+    margin-top: 65px
+
+.cover-block-design__blue-icon
+    z-index: -50
+    margin-left: 841px
+
+.cover-block-design__header
+    margin-top: -105px
+
+.cover-block-design__header
+    p
+        @include font(400,20px)
+        line-height: 135%
+        margin-left: 106px
+    
+    h1
+        @include font(700,100px)
+        line-height: 100%
+        margin-top: -22px
+        margin-left: 48px
+
+.cover-block-design__disciplines
+    display: flex
+    justify-content: center
+    margin-top: 56px
+
+.cover-block-design__disciplines-wrapper
+    min-width: 673px
+    display: flex
+    justify-content: space-between
+
+    p
+        @include font(570,20px)
+        line-height: 135%
+
+.cover-block-design__image
+    min-height: 350px
+    margin-top: 32px
+    display: flex
+    flex-direction: column
+
+.cover-block-design__arrow1
+    margin-left: 21px
+    margin-top: -392px
+
+.cover-block-design__link-to-video
+    margin-left: 502px
+    margin-top: 31px
+    @include font(400,16px)
+    line-height: 100%
+    color: $light-grey-color
+
+.cover-block-design__link-to-video
+    a:hover
+        color: white
+
+    a:active
+        color: $light-grey-color
+
+.cover-block-design__arrow2
+    margin-left: 480px
+    margin-top: -3px
+
+.cover-block-design__text
+    margin-top: 37px
+    display: flex
+    flex-direction: column
+    text-align: center
+    align-items: center
+
+.cover-block-design__text
+    p
+        max-width: 781px
+        @include font(400,20px)
+        line-height: 100%
+
+.cover-block-design__text
+    a
+        max-width: 87px
+        margin-top: 30px
+        @include font(400,16px)
+        line-height: 100%
+        color: $grey-color
+
+.cover-block-design__text
+    a:hover
+        color: $dark-grey-color
+    
+    a:active
+        color: $grey-color
+
+/* Block with gallery */
+
+.gallery-block
+    margin-top: 127px
+
+/* Block with years */
+
+.years-block
+    margin-top: 50px
+
+/* Block with disciplines */
+
+.disciplines-block
+    margin-top: 60px
+
+.disciplines-block-wrapper
+    background-image: url("../../../src/assets/images/image-disciplines2.jpg")
+
+.disciplines-block__disciplines      
+    p:nth-child(3)
+        margin-left: 140px
+
+/* Block with teachers */
+
+.teachers-block
+    margin-top: -77px
+
+/* Block with news */
+
+.news-block
+    margin-top: 90px
+
+/* Block with form */
+
+.form-block
+      margin-top: 85px
+
+/* Footer */
+
+.footer
+      margin-top: 85px
+
+/* Styles for tablets */
+
+@media screen and (min-width: 768px) and (max-width: 1129px)
+    /* Cover block */
+    .cover-block-design
+        margin-top: -25px
+    
+    .cover-block-design__blue-icon
+        margin-left: 423px
+        margin-top: 10px
+    
+    .cover-block-design__disciplines
+        margin-top: 33px
+    
+    .cover-block-design__image
+        min-height: 220px
+    
+    .cover-block-design__img
+        width: 658px
+        height: 217px
+        margin-left: 40px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .cover-block-design__link-to-video
+        margin-left: 305px
+    
+    .cover-block-design__arrow2
+        margin-left: 284px
+    
+    .cover-block-design__arrow1
+        margin-left: 43px
+    
+    /* Block with gallery */
+    .gallery-block
+        margin-top: 42px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 0px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 15px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 40px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 65px
+
+/* Styles for large phones */   
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+    /* Cover block */
+    .cover-block-design
+        margin-top: 125px
+    
+    .cover-block-design__header
+        h1
+            font-size: 75px
+            margin-top: 2px
+    
+    .cover-block-design__blue-icon
+        display: none
+    
+    .cover-block-design__disciplines
+        margin-top: 33px
+    
+    .cover-block-design__disciplines-wrapper
+        min-width: 460px
+    
+    .cover-block-design__image
+        min-height: 220px
+    
+    .cover-block-design__img
+        width: 450px
+        height: 217px
+        margin-left: 0px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .cover-block-design__link-to-video
+        margin-left: 180px
+    
+    .cover-block-design__arrow2
+        margin-left: 160px
+    
+    .cover-block-design__arrow1
+        margin-left: 8px
+    
+    /* Block with gallery */
+    .gallery-block
+        margin-top: 42px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 0px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 15px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 40px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 65px
+    
+/* Styles for medium phones */
+
+@media screen and (min-width: 321px) and (max-width: 479px)
+    /* Cover block */
+    .cover-block-design
+        margin-top: 125px
+    
+    .cover-block-design__header
+        h1
+            font-size: 48px
+            margin-top: 2px
+            margin-left: 10px
+    
+    .cover-block-design__blue-icon
+        display: none
+    
+    .cover-block-design__disciplines
+        margin-top: 33px
+    
+    .cover-block-design__disciplines-wrapper
+        min-width: 150px
+        flex-direction: column
+        align-items: center
+        margin-left: 15px
+    
+    .cover-block-design__disciplines-wrapper
+        p
+            font-size: 30px
+    
+    .cover-block-design__image
+        min-height: 175px
+    
+    .cover-block-design__img
+        width: 291px
+        height: 170px
+        margin-left: 0px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .cover-block-design__link-to-video
+        margin-left: 104px
+    
+    .cover-block-design__arrow2
+        margin-left: 83px
+    
+    .cover-block-design__arrow1
+        margin-left: 8px
+    
+    /* Block with gallery */
+    .gallery-block
+        margin-top: 42px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 0px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 15px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 5px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 45px
+
+/* Styles for small phones */
+
+@media screen and (max-width: 320px)
+    /* Cover block */
+    .cover-block-design
+        margin-top: 125px
+    
+    .cover-block-design__header
+        h1
+            font-size: 48px
+            margin-top: 2px
+            margin-left: 10px
+    
+    .cover-block-design__blue-icon
+        display: none
+    
+    .cover-block-design__disciplines
+        margin-top: 33px
+    
+    .cover-block-design__disciplines-wrapper
+        min-width: 150px
+        flex-direction: column
+        align-items: center
+        margin-left: 15px
+    
+    .cover-block-design__disciplines-wrapper
+        p
+            font-size: 30px
+    
+    .cover-block-design__image
+        min-height: 175px
+    
+    .cover-block-design__img
+        width: 291px
+        height: 170px
+        margin-left: 0px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    
+    .cover-block-design__link-to-video
+        margin-left: 104px
+    
+    .cover-block-design__arrow2
+        margin-left: 83px
+    
+    .cover-block-design__arrow1
+        margin-left: 8px
+    
+    /* Block with gallery */
+    .gallery-block
+        margin-top: 42px
+    
+    /* Block with years */
+    .years-block
+        margin-top: 0px
+    
+    /* Block with teachers */
+    .teachers-block
+        margin-top: 15px
+    
+    /* Block with news */
+    .news-block
+        margin-top: 35px
+    
+    .news-block__wrapper
+        margin-top: 35px
+    
+    /* Block with navigation (Design, History, Art) */
+    .navigation-block
+        margin-top: 5px
+    
+    /* Block with form */
+    .form-block
+        margin-top: 45px
